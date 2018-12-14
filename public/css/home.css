@@ -1,0 +1,820 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*FIRST CONTENT BLOCK*/
+.main-content-container{
+	//margin-top: 12.5vh;
+}
+#hotel-main-picture-titles-container{
+	position: absolute;
+	bottom: 170px;
+	z-index: 2;
+	width: 100%;
+}
+#hotel-main-picture-titles-container p{
+	z-index: 9999;
+	color: white;
+	text-align: center;
+}
+#mizuki-blue-amber-hotel-title{
+	font-family: 'Cormorant Upright', serif;
+	font-style: italic;
+	font-size: 1.1em;
+	padding-bottom: 1.5em;
+	letter-spacing: 0.15em;
+}
+#hotel-main-picture-titles-line{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1.5em;
+}
+#hotel-main-picture-titles-line div{
+	border-bottom: 2px solid white;
+	width: 3.5%;
+}
+#coming-to-chongqing{
+	font-family: 'Quicksand', sans-serif;
+	font-weight: normal;
+	font-size: 3em;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+#video-gradient{
+	background: linear-gradient(180deg,transparent 0,rgba(0, 0, 0, 0.85));
+	z-index: 1;
+	position: absolute;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+.hotel-main-picture-container{
+	position: relative;
+	top: calc(12.5vh + 39px);
+	margin-bottom: 12.5vh;
+}
+.hotel-main-picture-container video{
+	width: 100%;
+	z-index: -1;
+}
+#video_lower_height{
+	display: none;
+}
+#video-banner-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	z-index: 3;
+	top: 91.5%;
+}
+#video-banner-itself{
+	width: 50%;
+	height: 120px;
+	text-align: center;
+	background-color: white;
+	box-shadow: 0 1px 30px 4px rgba(0,0,0,.12);
+	border: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#video-banner-itself p{
+	font-family: 'Cormorant Upright', serif;
+	font-size: 1.5em;
+	text-transform: capitalize;
+	letter-spacing: 0.15em;
+	line-height: 1.5em;
+}
+#video-banner-itself img{
+	width: 70px;
+	height: 70px;
+}
+#home-background-mob{
+	display: none;
+}
+.first-content-block-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 4em;
+	letter-spacing: 0.0625em;
+}
+.content-presentation-title-container{
+	display: flex;
+	justify-content: center;
+	padding-top: 12.5em;
+	letter-spacing: 0.0625em;
+}
+#content-presentation-title{
+	text-align: center;
+	font-weight: 200;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.5em;
+	color: rgb(80,80,80);
+	padding-top: 2em;
+	padding-bottom: 40px;
+	text-transform: uppercase;
+	line-height: 2.5em;
+	letter-spacing: 0.2em;
+}
+.first-content-images-container{
+	display: flex;
+	padding-bottom: 4em;
+}
+.first-content-image-container{
+	padding: 0.5em 2em 0.75em 2em;
+}
+.first-content-image-description-container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 350px;
+}
+#first-content-image-description-title{
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5em;
+	letter-spacing: 0.2em;
+	font-weight: bold;
+	text-align: center;
+}
+#first-content-image-description{
+	padding-top: 1em;
+	text-align: center;
+	line-height: 1.8em;
+	font-family: 'Cormorant Upright', serif;
+}
+#border-bottom-first-content-title{
+	padding-top: 1.5em;
+	border-bottom: 1px solid rgb(210, 210, 210);
+	width: 30%;
+}
+.first-content-image-container img{
+	box-shadow: 0 1px 30px 4px rgba(0,0,0,.12);
+	width: 100%;
+	height: 100%;
+}
+.first-content-image-container p{
+	text-align: center;
+	font-family: 'Cormorant Upright', serif;
+	font-style: italic;
+	font-size: 0.9em;
+	padding-top: 6px;
+	color: rgb(120,120,120);
+	cursor: pointer;
+}
+#first-content-image-details-title{
+	text-align: center;
+	padding-bottom: 1.5em;
+	font-family: 'Questrial', sans-serif;
+	text-transform: uppercase;
+}
+#first-content-image-details-itself_first{
+	padding-left: 8px;
+	padding-right: 8px;
+	font-family: 'Quicksand', sans-serif;
+}
+#first-content-image-details-button-container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 2em;
+}
+#last-first-content-block button{
+	padding: 12px;
+	border: none;
+	background-color: rgb(15, 15, 15);
+	font-family: 'Questrial', sans-serif;
+	font-size: 1em;
+	cursor: pointer;
+	transition-duration: 0.35s;
+	color: white;
+	letter-spacing: 0.8px !important;
+}
+#last-first-content-block button:hover{
+	background-color: white;
+	transition-duration: 0.35s;
+	color: black;
+	border: 1px solid black;
+}
+#last-first-content-block{
+	padding-bottom: 5em;
+}
+/*FIRST CONTENT BLOCK*/
+
+/*SECOND CONTENT BLOCK*/
+.second-content-block-container{
+	padding-top: 3em;
+	padding-bottom: 3em;
+	background-color: #e9f1fa;
+}
+#explore-content-spots-container-aux{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+#explore-content-spots-container{
+	display: flex;
+	letter-spacing: 0.0625em;
+}
+.explore-chongqing-title-container h3{
+	padding-bottom: 2.5em;
+	padding-left: 15px;
+	font-size: 1.45em;
+	font-weight: normal;
+	font-family: 'Quicksand', sans-serif;
+	letter-spacing: 0.0625em;
+}
+.explore-chongqing-content-spot-container-aux{
+	display: flex;
+}
+.explore-chongqing-content-spot{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.explore-chongqing-content-spot img{
+	width: 270px;
+	height: 170px;
+}
+.chongqing-content-spot-description-links{
+	padding-top: 25px;
+}
+.chongqing-content-spot-description-links p{
+	padding-top: 30px;
+}
+.chongqing-content-spot-description-links a{
+	text-decoration: none;
+	color: black;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+}
+.chongqing-content-spot-see-more{
+	font-weight: normal !important;
+	letter-spacing: 0.0500em !important;
+	text-decoration: underline !important;
+}
+/*SECOND CONTENT BLOCK*/
+
+/*THIRD CONTENT BLOCK*/
+.third-content-block-container{
+	padding-top: 2em;
+	padding-bottom: 3em;
+	letter-spacing: 0.0625em;
+}
+#location-content-title{
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.55em;
+	color: rgb(40,40,40);
+	padding-top: 2em;
+	padding-bottom: 4em;
+	letter-spacing: 0.2em;
+	line-height: 2em;
+}
+.location-content-container-aux{
+	display: flex;
+	justify-content: center;
+}
+#location-content-container{
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+}
+#location-content-container > div{
+	width: 50%;
+}
+#map{
+	width: 50%;
+	height: 400px;
+}
+.park-content-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.park-description-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+.park-content-container h3{
+	font-size: 1em;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	font-weight: bold;
+	color: black !important;
+	width: 100%;
+	text-align: center;
+}
+.park-content-container p{
+	font-family: 'Lora', serif !important;
+	font-style: italic;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
+	width: 70%;
+	letter-spacing: 0.035em;
+	font-size: 0.95em;
+}
+.park-content-container p, .park-content-container h3{
+	text-align: center;
+	line-height: 1.5em;
+	color: rgb(100, 100, 100);
+	letter-spacing: 0.10em;
+}
+#check-more-park-container{
+	display: flex;
+	justify-content: center;
+	padding-top: 1em;
+	width: 70%;
+}
+#check-more-park-container a{
+	padding: 12px;
+	border: none;
+	background-color: rgb(20, 20, 20);
+	font-family: 'Questrial', sans-serif;
+	font-size: 1em;
+	cursor: pointer;
+	transition-duration: 0.35s;
+	color: white;
+	letter-spacing: 0.8px !important;
+	text-decoration: none;
+}
+#check-more-park-container a:hover{
+	background-color: white;
+	transition-duration: 0.35s;
+	color: black;
+	border: 1px solid black;
+}
+/*THIRD CONTENT BLOCK*/
+
+/*FOOTER*/
+footer{
+	margin-top: 3.5em;
+	padding-top: 3.5em;
+	padding-bottom: 2em;
+	background-color: #e9f1fa;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#footer-first-block{
+	width: 85%;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 2em;
+}
+#footer-discover-the-hotel-title-container h2, #footer-contact-info-title-container h2, #footer-newsletter-title-container h2{
+	font-family: 'Questrial', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 1.5em;
+	letter-spacing: 0.1em;
+	font-size: 1.1em;
+}
+#footer-first-block p{
+	font-size: 0.95em;
+}
+#footer-contact-info{
+	margin-left: 35px;
+}
+#footer-contact-info-title-container h2, #footer-newsletter-title-container h2{
+	text-align: center;
+}
+#footer-first-block ul li{
+	padding-top: 12px;
+	padding-bottom: 12px; 
+}
+#footer-first-block ul li a{
+	font-family: 'Questrial', sans-serif;
+	text-decoration: none;
+	color: rgb(100, 100, 100);
+	font-size: 1em;
+	letter-spacing: 0.025em;
+}
+#footer-first-block ul li a:hover{
+	text-decoration: underline;
+}
+#footer-contact-info p{
+	font-family: 'Questrial', sans-serif;
+	color: rgb(100, 100, 100);
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	letter-spacing: 0.025em;
+}
+#footer-contact-info-social-icons-container{
+	display: flex;
+	justify-content: center;
+	padding-top: 18px;
+}
+#footer-newsletter-texts-container p{
+	font-family: 'Quicksand', sans-serif;
+	color: rgb(100, 100, 100);
+	text-align: center;
+	letter-spacing: 0.025em;
+}
+#footer-contact-info-social-icons-container img{
+	width: 40px;
+	height: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#footer-newsletter-input-container{
+	padding-top: 2em;
+}
+#footer-newsletter-input-container input{
+	padding: 13px 20px 13px 20px;
+	border-radius: 30px;
+	border: 1px solid rgb(200, 200, 200);
+	color: rgb(130, 130,130);
+	font-family: 'Cormorant Upright', serif;
+	font-style: italic;
+	font-size: 0.95em;
+	letter-spacing: 0.025em;
+	width: 250px;
+}
+#footer-newsletter-input-container img{
+	transition-duration: 0.4s;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	position: absolute;
+	margin-left: 250px;
+	padding: 9px 0px 9px 0px;
+}
+#footer-line{
+	border-bottom: 1px solid rgb(210, 210, 210);
+	width: 70%;
+	padding-top: 1.5em;
+}
+/*SECOND BLOCK*/
+#footer-second-block-container{
+	padding-top: 2em;
+}
+#footer-second-block-events-and-meetings-container{
+	padding-top: 2em;
+	display: flex;
+	justify-content: center;
+	padding-right: 2em;
+}
+.footer-events-and-meetings-direct-container{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding-right: 50px;
+	padding-left: 50px;
+}
+.footer-events-and-meetings-direct-container img{
+	width: 85px;
+	height: 85px;
+	cursor: pointer;
+}
+.footer-events-and-meetings-direct-container p{
+	padding-top: 1em;
+	font-family: 'Questrial', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	letter-spacing: 0.25em;
+}
+#footer-second-block-copyright-container{
+	padding-top: 3em;
+	font-family: 'Questrial', sans-serif;
+	color: rgb(110, 110, 110);
+	padding-right: 20px;
+	padding-left: 20px;
+	text-align: center;
+}
+/*SECOND BLOCK*/
+/*FOOTER*/
+@media(max-height: 800px){
+	.main-content-container{
+		/*margin-top: 11.5vh;*/
+	}
+
+	#video-banner-itself{
+		height: 100px;
+	}
+}
+
+@media(max-width: 1600px){
+	#content-presentation-title{
+		font-size: 1.4em;
+	}
+
+	.first-content-image-container img{
+		width: 90%;
+		height: 90%;
+	}
+
+	#hotel-main-picture-titles-container{
+		bottom: 150px;
+	}
+
+	.explore-chongqing-title-container h3{
+		font-size: 1.35em;
+	}
+	.chongqing-content-spot-description-links p{
+		padding-top: 16px;
+	}
+	.chongqing-content-spot-description-links a{
+		font-size: 0.9em;
+	}
+
+	#location-content-title{
+		font-size: 1.4em;
+	}
+	.park-content-container h3{
+		font-size: 0.95em;
+	}
+	.park-content-container p ,#check-more-park-container a{
+		font-size: 0.88em;
+	}
+	#video-banner-itself p{
+		font-size: 1.4em;
+	}
+}
+
+@media(max-width: 1550px){
+	#video_default{
+		display: none;
+	}
+	#video_lower_height{
+		display: block;
+	}
+}
+
+@media(max-width: 1300px){
+	#hotel-main-picture-titles-container{
+		bottom: 130px;
+	}
+
+	#location-content-container{
+		flex-direction: column;
+	}
+	#location-content-container > div{
+		width: auto;
+	}
+	#map{
+		margin-bottom: 1em;
+	}
+	.park-content-container{
+		flex-direction: row;
+		justify-content: center;
+	}
+	.park-content-container p, .park-content-container h3{
+		width: 85%;
+		text-align: center;
+		line-height: 1.5em;
+	}
+
+	#footer-first-block{
+		width: 95%;
+	}
+	#footer-first-block > div p{
+		font-size: 0.9em;
+	}
+}
+
+@media(max-width: 1220px){
+	.explore-chongqing-content-spot img{
+		width: 210px;
+		height: 130px;
+	}
+	.footer-events-and-meetings-direct-container p{
+		font-size: 0.9em;
+	}
+}
+@media(max-width: 1150px){
+	.hotel-main-picture-container{
+		display: none;
+	}
+}
+@media(max-width: 1000px){
+	.explore-chongqing-title-container h3{
+		text-align: center;
+	}
+	.explore-chongqing-content-spot-container-aux{
+		display: flex;
+		flex-direction: column;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.explore-chongqing-content-spot img{
+		width: 270px;
+		height: 170px;
+	}
+	.chongqing-content-spot-description-links{
+		padding-bottom: 12px;
+	}
+
+	#footer-first-block{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#footer-first-block > div{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#footer-newsletter-container{
+		padding-top: 2.5em;
+	}
+}
+
+@media(max-width: 900px){
+	#home-background{
+		display: none;
+	}
+	#home-background-mob{
+		display: inline-block;
+	}
+
+
+	.park-content-container{
+		flex-direction: column;
+	}
+	#footer-contact-info{
+		margin-left: 0px;
+	}
+}
+
+@media(max-width: 750px){
+	.first-content-images-container{
+		flex-direction: column;
+		align-items: center;
+	}
+	.first-content-image-description-container{
+		padding-top: 2em;
+	}
+	.first-content-image-container img{
+		width: 80%;
+		height: 80%;
+	}
+	.first-content-image-container-sub-aux{
+		display: flex;
+		justify-content: center;
+	}
+	#first-content-image-details-itself_first{
+		text-align: center;
+		line-height: 20px;
+	}
+	#explore-content-spots-container{
+		flex-direction: column;
+	}
+	.explore-chongqing-content-spot-container-aux{
+		display: flex;
+		flex-direction: column;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.explore-chongqing-content-spot img{
+		width: 350px;
+		height: 220px;
+	}
+	.chongqing-content-spot-description-links{
+		padding-bottom: 20px;
+	}
+	.chongqing-content-spot-description-links p{
+		padding-top: 15px;
+	}
+
+
+	.park-description-container{
+		padding-bottom: 1em;
+	}
+	#check-more-park-container{
+		display: none;
+	}
+
+
+	#footer-first-block > div{
+		padding-bottom: 2.5em;
+	}
+	#footer-first-block ul li{
+		text-align: center;
+	}
+
+	#footer-second-block-events-and-meetings-container{
+		padding-right: 0px;
+	}
+	.footer-events-and-meetings-direct-container{
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media(max-width: 550px){
+	#content-presentation-title{
+		font-size: 1.25em;
+	}
+
+	#beautiful-park-image-mob{
+		width: 100%;
+	}
+
+	#content-presentation-title{
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	#location-content-container{
+		width: 85%;
+	}
+	#location-content-title{
+		padding-bottom: 3em;
+	}
+	.park-content-container{
+		padding-top: 2em;
+	}
+	.first-content-image-container img{
+		width: 100%;
+		height: 90%;
+	}
+
+	footer{
+		margin-top: 2em;
+	}
+	#footer-newsletter-container{
+		padding-top: 1.5em;
+	}
+	.footer-events-and-meetings-direct-container p{
+		text-align: center;
+		line-height: 1.5em;
+	}
+}
+
+@media(max-width: 460px){
+	.explore-chongqing-content-spot img{
+		width: 270px;
+		height: 180px;
+	}
+	#first-content-image-details-itself_first{
+		text-align: center;
+		padding-left: 14px;
+		padding-right: 14px;
+		font-size: 0.95em;
+	}
+
+	#first-content-image-description{
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+
+	.footer-events-and-meetings-direct-container img{
+		width: 65px;
+		height: 65px;
+	}
+	.footer-events-and-meetings-direct-container p{
+		font-size: 0.85em;
+	}
+}

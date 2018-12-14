@@ -1,0 +1,149 @@
+@media(max-width: 1550px){
+	#reservation-modal-content-container{
+		padding-right: 3em;
+		padding-left: 3em;
+	}
+	#reservation-modal-footer-container ul li a{
+		font-size: 0.8em !important;
+	}
+	#reservation-modal-first-block-title-container h1{
+		font-size: 1.15em;
+	}
+	#reservation-modal-first-block-title-container h2{
+		font-size: 1.6em;
+		padding-bottom: 0.4em;
+	}
+}
+
+@media(max-width: 1200px){
+	#reservation-modal-content-container{
+		padding-right: 2em;
+		padding-left: 2em;
+	}
+	#reservation-modal-first-block-texts-container p{
+		padding-top: 0.6em;
+		font-size: 0.9em;
+	}
+	#calendar-and-people-number-container-aux{
+		width: 85%;
+	}
+}
+@media(max-width: 1050px){
+	#reservation-modal-footer-container ul{
+		padding-top: 8%;
+	}
+	#reservation-modal-email-container input{
+		width: 82%;
+	}
+}	
+
+@media(max-width: 900px){
+	#reservation-modal-first-block-title-container h2{
+		font-size: 1.45em;
+	}
+	#reservation-modal-first-block-title-container h1{
+		font-size: 1.1em;
+	}
+	#reservation-modal-first-block-texts-container p{
+		font-size: 0.85em;
+	}
+	#reservation-modal-email-container input{
+		font-size: 0.9em;
+	}
+	#people-number-direct-container p, #check-in-calendar-container p, #check-out-calendar-container p{
+		font-size: 0.8em;
+	}
+	#calendar-and-people-number-container-aux{
+		width: 90%;
+	}
+	#people-number-direct-container option, #people-number-direct-container select, #check-in-calendar-container > div, #check-out-calendar-container > div{
+		font-size: 0.9em;
+	}
+	#reservation-modal-footer-container ul li a{
+		font-size: 0.75em !important;
+	}
+}
+
+@media(max-width: 850px){
+	#calendar-and-people-number-container-aux{
+		flex-wrap: wrap;
+	}
+	#calendar-and-people-number-container-aux > div{
+		padding-right: 0.5em;
+		padding-left: 0.5em;
+		padding-bottom: 2em;
+	}
+	#reservation-modal-footer-container{
+		height: 18%;
+	}
+	#reservation-modal-ul-container{
+		display: none;
+	}
+	#reservation-modal-stars-container{
+		padding-top: 20px;
+	}
+	#reservation-modal-content-container{
+		height: 82%;
+	}
+}
+
+@media(max-width: 800px){
+	#reservation-modal-send-button-container button{
+		width: 80%;
+	}
+}
+
+@media(max-width: 650px){
+	#reservation-modal-container{
+		width: 80vw;
+		margin-left: -40vw;
+	}
+	#reservation-modal-content-container{
+		padding-left: 1em;
+		padding-right: 0.5em;
+	}
+	#first-paragraph-firstblock{
+		display: none !important;
+	}
+	#calendar-and-people-number-container{
+		padding-top: 2em;
+	}
+	#calendar-and-people-number-container-aux{
+		justify-content: center;
+	}
+}
+
+@media(max-width: 480px){
+	#people-number-direct-container p, #check-in-calendar-container p, #check-out-calendar-container p{
+		font-size: 0.7em !important;
+	}
+	#reservation-modal-first-block-title-container h2{
+		font-size: 1.3em;
+	}
+	#reservation-modal-first-block-title-container h1{
+		font-size: 1em;
+	}
+}
+@media(max-width: 450px){
+	#reservation-modal-content-container{
+		flex-direction: column;
+	}
+	#reservation-modal-first-block-texts-container{
+		display: none;
+	}
+	#reservation-modal-second-content-first-block-container{
+		padding: 1em;
+		padding-top: 2em;
+	}
+	#reservation-modal-first-content-block-container{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	#reservation-modal-second-content-first-block-container{
+		width: 85%;
+	}
+	#reservation-modal-email-container{
+		width: 100%;
+	}
+}

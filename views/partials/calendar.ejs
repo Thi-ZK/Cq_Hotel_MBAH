@@ -1,0 +1,36 @@
+<div id="calendar-container">
+    <div id="calendar-top-header">
+        <div id="calendar-top-header-month-and-year-container">
+            <p id="month">January </p>
+            <p id="year">2019</p>
+        </div>
+        <div id="calendar-top-header-forward-and-back-container">
+            <p id="calendar-back">Back</p>
+            <p id="calendar-forward">Forward</p>
+        </div>
+    </div>
+    <div id="calendar-weekdays-header">
+        <ul>
+            <li class="calendar-monday">Mon</li>
+            <li class="calendar-tuesday">Tue</li>
+            <li class="calendar-wednesday">Wed</li>
+            <li class="calendar-thursday">Thu</li>
+            <li class="calendar-friday">Fri</li>
+            <li class="calendar-saturday">Sat</li>
+            <li class="calendar-sunday">Sun</li>
+        </ul>
+    </div>
+    <div id="calendar-days-container">
+        <%for (var i = 0; i < 6; i++) {%>
+             <ul class="calenday-days-ul-<%=i%>">
+                <li class="calendar-day"></li>
+                <li class="calendar-day"></li>
+                <li class="calendar-day"></li>
+                <li class="calendar-day"></li>
+                <li class="calendar-day"></li>
+                <li class="calendar-day"></li>
+                <li class="calendar-day"></li>
+            </ul>
+        <%}%>
+    </div>
+</div>

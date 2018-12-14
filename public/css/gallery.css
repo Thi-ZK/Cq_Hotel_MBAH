@@ -1,0 +1,141 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*GALLERY TITLE*/
+.main-content-container{
+	margin-top: 16.5vh;
+}
+#gallery-presentation-and-title-container{
+	background-image: url("../imgs/gallery/background_2.jpg");
+	height: 280px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+#gallery-titles-container{
+	padding-left: 4em;
+}
+#gallery-titles-container h1{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 2.2em;
+	text-transform: uppercase;
+	color: white;
+	padding-bottom: 1em;
+	letter-spacing: 0.15em;
+	font-weight: normal;
+}
+#gallery-titles-container p{
+	font-family: 'Cormorant Upright', serif;
+	font-size: 1.05em;
+	color: white;
+	letter-spacing: 0.1em;
+	font-style: italic;
+}
+/*GALLERY TITLE*/
+/*GALLERY PICTURES*/
+#gallery-pictures-container{
+	padding: 2em;
+	padding-top: 4em;
+}
+.pictures-block-container{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+.picture-container-itself{
+	padding-bottom: 1.5em;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.picture-container-itself img{
+	width: 420px;
+	height: 280px;
+	cursor: pointer;
+	position: relative;
+}
+.picture-container-itself img:hover{
+	-webkit-box-shadow: 0px 0px 20px 0px black;
+	        box-shadow: 0px 0px 20px 0px black;
+}
+/*GALLERY PICTURES*/
+@media(max-width: 650px){
+	#gallery-titles-container{
+		padding-left: 0px;
+	}
+	#gallery-titles-container h1, #gallery-titles-container p{
+		text-align: center;
+	}
+	#gallery-pictures-container{
+		padding-left: 0em;
+		padding-right: 0em;
+	}
+	.picture-container-itself{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+@media(max-width: 460px){
+	.picture-container-itself img{
+		width: 350px;
+	}
+}
+
+@media(max-width: 380px){
+	.picture-container-itself img{
+		width: 320px;
+	}
+}

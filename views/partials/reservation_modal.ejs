@@ -1,0 +1,69 @@
+<div id="reservation-modal-container">
+	<div id="reservation-modal-title-and-close-button-container">
+		<img src="imgs/general/close_button.png">
+	</div>
+	<div id="reservation-modal-content-container">
+		<div id="reservation-modal-first-content-block-container">
+			<div id="reservation-modal-first-block-title-container">
+				<h1>Reservations</h1>
+				<h2>Contact us</h2>
+			</div>
+			<div id="reservation-modal-first-block-texts-container">
+				<p id="first-paragraph-firstblock">Please fill the form so we can anwser you with available rooms and prices and so reservate the room for you.</p>
+				<p>If you prefer, you can also call us anytime between 8:00 AM and 8:00 PM. We can make the reservation process through the phone call.</p>
+				<p id="reservation-modal-phone">Phone: +86 (22) 1788-9893 | (22) 3331- 9435</p>
+				<p id="reservation-modal-email">Email: mbah.contact@gmail.com</p>
+			</div>
+		</div>
+		<div id="reservation-modal-second-content-first-block-container">
+			<div id="reservation-modal-email-container">
+				<input type="text" name="" placeholder="Email">
+			</div>
+			<div id="calendar-and-people-number-container">
+				<div id="calendar-and-people-number-container-aux">
+					<div id="check-in-calendar-container">
+						<p>Check - in</p>
+						<div id="check-out-div">Check in</div> <!-- CHECK IN CALENDAR HERE-->
+						<%include calendar.ejs%>
+					</div>
+					<div id="check-out-calendar-container">
+						<p>Check - out</p>
+						<div id="check-in-div">Check out</div> <!-- CHECK IN CALENDAR HERE-->
+					</div>
+					<div id="people-number-direct-container">
+						<p>People</p>
+						<select>
+							<%for (var i = 0; i < 30; i++) {%>
+								<option><%=i%></option>
+							<%}%>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div id="reservation-modal-send-button-container">
+				<button>Send request</button>
+			</div>
+		</div>
+	</div>
+	<div id="reservation-modal-footer-container">
+		<div id="reservation-model-footer-title-container">
+			<div id="reservation-modal-stars-container">
+				<img src="imgs/general/little_star.png">
+				<img src="imgs/general/little_star.png">
+				<img src="imgs/general/little_star.png">
+				<img src="imgs/general/little_star.png">
+				<img src="imgs/general/little_star.png">
+			</div>
+			<p>Mizuki Blue Amber Hotel</p>
+		</div>
+		<div id="reservation-modal-ul-container">
+			<ul>
+				<li><a href="/gallery">Gallery</a></li>
+				<li><a href="/about_us">About us</a></li>
+				<li><a href="/informations">Informations</a></li>
+				<li><a href="#">Prices <span>&</span> offers</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="overlay"></div>
