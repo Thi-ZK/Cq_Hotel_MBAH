@@ -74,6 +74,7 @@ table {
 
 /*CONTENT CONTAINER*/
 #informations-content-container{
+	transition-duration: 0.75s;
 	padding-top: 4em;
 }
 #informations-content-container{
@@ -85,6 +86,8 @@ table {
 	        justify-content: center;
 }
 #information-content-direct-container{
+	-webkit-transition: all 850ms;
+	-o-transition: all 850ms;
 	transition: all 850ms;
 	left: 0;
 	width: 80%;
@@ -100,7 +103,9 @@ table {
 .information-content-div{
 	width: 370px;
 	height: 240px;
-	transition-duration: 0.85s;
+	-webkit-transition-duration: 0.85s;
+	     -o-transition-duration: 0.85s;
+	        transition-duration: 0.85s;
 	background-color: #e9f1fa;
 	margin: 1em;
 	cursor: pointer;
@@ -242,3 +247,44 @@ table {
 	font-weight: normal;
 }
 /*FLIP*/
+
+
+/*CONTENT DETAILS*/
+#content-selected-details-container{
+	position: absolute;
+	left: 55%;
+	margin-bottom: 5em;
+	width: 30%;
+	opacity: 0;
+	visibility: hidden;
+	transition-duration: 2.5s;
+}
+#content-selected-details-container h1{
+	font-family: 'Cormorant Upright', serif;
+	line-height: 1.5em;
+	letter-spacing: 0.18em;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.05em;
+}
+#content-selected-details-border{
+	width: 30%;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid rgb(140, 140, 140);
+}
+#content-selected-details-container p{
+	padding-top: 2em;
+	font-family: 'Questrial', sans-serif;
+	/*font-family: 'Cormorant Upright', serif;*/
+	font-size: 0.95em;
+	letter-spacing: 0.05em;
+	line-height: 23px;
+	text-align: center;
+}
+/*CONTENT DETAILS*/
+
+@media(max-width: 1450px){
+	
+}
