@@ -1,6 +1,7 @@
 !function(){
 	var contents = document.querySelectorAll(".information-content-div");
 	var content_direct_container = document.querySelector("#information-content-direct-container");
+	var content_details_container_mob = document.querySelector("#content-selected-details-container-mob");
 	var contents_texts = document.querySelectorAll(
 		".flip-card-back h2," +
 		".information-content-title-container h2," +
@@ -23,16 +24,16 @@
 		return false;
 	}
 
-	var map = Array.prototype.map;
+	var map = Array.prototype.map; // doc.querySelec retrieves a node list, not an array
 	var texts_manager = function(texts, decider, SP_ELEM){ // texts = array | decider = boolean
-		map.call(texts, function(elem){
+		map.call(texts, function(elem){ // turns the display of a nodelist/array block or none
 			if(!check_parent(elem, SP_ELEM)){
 				decider ? elem.style.display = "block" : elem.style.display = "none";
 			}
 		});
 	}
 
-	var contents_animation = function(target){
+	var contents_animation = function(target){ // takes care of all transitions effects, except for setting the height 0
 		document.querySelector("#information-content-direct-container").style.position = "relative";
 		if(window.innerWidth > 1525){
 			if((target.getAttribute("content_index") == "2") || (target.getAttribute("content_index") == "5")){
@@ -55,7 +56,7 @@
 		}else if(window.innerWidth < 820){
 		    
 		}
-		setTimeout(function(){
+		setTimeout(function(){ // manager of the new content to be shown, the texts about the content chosen.
 			var info_content_cont = document.querySelector("#informations-content-container");
 
 			if(window.innerWidth >820){
@@ -68,9 +69,9 @@
 				info_content_cont.style.marginBottom = "24em";
 			}
 			if(window.innerWidth < 820){
-				document.querySelector("#content-selected-details-container-mob").style.height = "auto";
-				document.querySelector("#content-selected-details-container-mob").style.visibility = "visible";
-				document.querySelector("#content-selected-details-container-mob").style.opacity = "1";
+				content_details_container_mob.style.height = "auto";
+				content_details_container_mob.style.visibility = "visible";
+				content_details_container_mob.style.opacity = "1";
 				info_content_cont.style.marginBottom = "0em";
 			}
 		}, 500);
