@@ -53,20 +53,25 @@
 		}else if((window.innerWidth < 1022) && (window.innerWidth > 820)){
 			content_direct_container.style.left = "-24%";
 		}else if(window.innerWidth < 820){
-			// content_direct_container.style.
+		    
 		}
 		setTimeout(function(){
 			var info_content_cont = document.querySelector("#informations-content-container");
 
-			document.querySelector("#content-selected-details-container").style.visibility = "visible";
-			document.querySelector("#content-selected-details-container").style.opacity = "1";
-			window.innerWidth > 1450 ? info_content_cont.style.marginBottom = "14em" : info_content_cont.style.marginBottom = "20em";
+			if(window.innerWidth >820){
+				document.querySelector("#content-selected-details-container").style.visibility = "visible";
+				document.querySelector("#content-selected-details-container").style.opacity = "1";
+				window.innerWidth > 1450 ? info_content_cont.style.marginBottom = "14em" : info_content_cont.style.marginBottom = "20em";
+			}
 
 			if(window.innerWidth < 970){
 				info_content_cont.style.marginBottom = "24em";
 			}
 			if(window.innerWidth < 820){
-				info_content_cont.style.marginBottom = "7em";
+				document.querySelector("#content-selected-details-container-mob").style.height = "auto";
+				document.querySelector("#content-selected-details-container-mob").style.visibility = "visible";
+				document.querySelector("#content-selected-details-container-mob").style.opacity = "1";
+				info_content_cont.style.marginBottom = "0em";
 			}
 		}, 500);
 	}
@@ -79,7 +84,13 @@
 				if(contents[y] !== this){
                     contents[y].style.height = "0px";
                     contents[y].style.visibility = "hidden";
+                    window.innerWidth <= 820 ? contents[y].style.margin = "0px" : undefined;
 				}
+			}
+			if(window.innerWidth <= 820){
+				$([document.documentElement, document.body]).animate({
+			        scrollTop: $("#informations-titles-container p").offset().top
+			    }, 500);
 			}
 			setTimeout(contents_animation.bind(null, this), 1100);
 		});
