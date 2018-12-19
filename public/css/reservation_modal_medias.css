@@ -74,7 +74,7 @@
 		padding-bottom: 2em;
 	}
 	#reservation-modal-footer-container{
-		height: 18%;
+		height: 18.1%;
 	}
 	#reservation-modal-ul-container{
 		display: none;
@@ -90,6 +90,7 @@
 @media(max-width: 800px){
 	#reservation-modal-send-button-container button{
 		width: 80%;
+		padding: 12px;
 	}
 }
 
