@@ -30,8 +30,8 @@ appl.get('/test', (req, res) => {
 });
 
 appl.listen((process.env.PORT || 12555), function(){
-	setInterval(function(){
-		request.get('https://mbah-test.herokuapp.com/imgs/home/jiefangbei.jpg');
-	}, 600000);
+	// setInterval(function(){
+	// 	request.get('https://mbah-test.herokuapp.com/imgs/home/jiefangbei.jpg');
+	// }, 600000);
 	console.log("ZeroTwo");
 });
