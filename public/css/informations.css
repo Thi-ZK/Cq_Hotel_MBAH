@@ -74,6 +74,7 @@ table {
 	letter-spacing: 0.05em;
 	text-align: center;
 	line-height: 20px;
+	color: rgb(140, 140, 140);
 }
 
 /*CONTENT CONTAINER*/
@@ -247,8 +248,17 @@ table {
 	padding-right: 2em;
 	padding-left: 2em;
 	line-height: 25px;
-	/*font-style: italic;*/
 	font-weight: normal;
+}
+.option-selected-click-to-go-back{
+	font-family: 'Cormorant Upright', serif;
+	font-size: 0.9em;
+	visibility: hidden;
+	opacity: 0;
+	text-align: center;
+	padding-top: 8px;
+	letter-spacing: 0.04em;
+	transition-duration: 2s;
 }
 /*FLIP*/
 

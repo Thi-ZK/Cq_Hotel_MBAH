@@ -585,7 +585,7 @@ footer{
 	}
 }
 
-@media(max-width: 1550px){
+@media(max-width: 1500px){
 	#video_default{
 		display: none;
 	}

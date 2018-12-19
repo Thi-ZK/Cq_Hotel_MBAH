@@ -53,9 +53,11 @@
 			}
 		}else if((window.innerWidth < 1022) && (window.innerWidth > 820)){
 			content_direct_container.style.left = "-24%";
-		}else if(window.innerWidth < 820){
-		    
 		}
+
+		target.querySelector(".option-selected-click-to-go-back").style.visibility = "visible"; // click again to go back to options
+		target.querySelector(".option-selected-click-to-go-back").style.opacity = "1";
+
 		setTimeout(function(){ // manager of the new content to be shown, the texts about the content chosen.
 			var info_content_cont = document.querySelector("#informations-content-container");
 
@@ -77,23 +79,51 @@
 		}, 500);
 	}
 
+	var reverse_contents_animations = function(target){
+		var info_content_cont = document.querySelector("#informations-content-container");
+
+		content_direct_container.style.left = "0%";
+
+		target.querySelector(".option-selected-click-to-go-back").style.visibility = "hidden"; // click again to go back to options
+		target.querySelector(".option-selected-click-to-go-back").style.opacity = "0";
+
+		document.querySelector("#content-selected-details-container").style.visibility = "hidden";
+		document.querySelector("#content-selected-details-container").style.opacity = "0";
+		info_content_cont.style.marginBottom = "0em";
+	}
+
 	for (var i = 0; i < contents.length; i++) {
 		contents[i].addEventListener("click", function(){
-			texts_manager(contents_texts, false, this);
+			if(content_direct_container.className === "options-mode"){ // to show the selected content and animations for that
+				texts_manager(contents_texts, false, this);
 
-			for (var y = 0; y < contents.length; y++) {
-				if(contents[y] !== this){
-                    contents[y].style.height = "0px";
-                    contents[y].style.visibility = "hidden";
-                    window.innerWidth <= 820 ? contents[y].style.margin = "0px" : undefined;
+				for (var y = 0; y < contents.length; y++) {
+					if(contents[y] !== this){
+		                contents[y].style.height = "0px";
+		                contents[y].style.visibility = "hidden";
+		                window.innerWidth <= 820 ? contents[y].style.margin = "0px" : undefined;
+					}
 				}
+				if(window.innerWidth <= 820){
+					$([document.documentElement, document.body]).animate({
+				        scrollTop: $("#informations-titles-container p").offset().top
+				    }, 500);
+				}
+
+				setTimeout(contents_animation.bind(null, this), 1100);
+				content_direct_container.className = "option-selected-mode";
+			}else{ // to hide last selected content and go back to options mode again
+				reverse_contents_animations(this);
+
+				for (var y = 0; y < contents.length; y++) {
+					contents[y].style.height = "240px";
+					contents[y].style.margin = "1em";
+					contents[y].style.visibility = "visible";
+				}
+
+				setTimeout(function(){texts_manager(contents_texts, true, this);}, 700);
+				content_direct_container.className = "options-mode";
 			}
-			if(window.innerWidth <= 820){
-				$([document.documentElement, document.body]).animate({
-			        scrollTop: $("#informations-titles-container p").offset().top
-			    }, 500);
-			}
-			setTimeout(contents_animation.bind(null, this), 1100);
 		});
 	}
 }();
