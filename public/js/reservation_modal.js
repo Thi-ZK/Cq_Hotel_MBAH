@@ -23,7 +23,7 @@
 
 	document.querySelector(".make-reservation-container button").onclick = function(){
 		reservation_modal.style.visibility = "visible";
-		window.innerWidth <= 650 ? reservation_modal.style.height = "80vh" : reservation_modal.style.height = "80vh";
+		window.innerWidth <= 650 ? reservation_modal.style.height = "75vh" : reservation_modal.style.height = "80vh";
 		overlay.style.display = "block";
 		
 		setTimeout(function(){
@@ -70,7 +70,7 @@
 		"september": "9",
 		"october": "10",
 		"november": "11",
-		"december": "12",
+		"december": "12"
 	};
 
 	for (var i = 0; i < calendar_days.length; i++) {
