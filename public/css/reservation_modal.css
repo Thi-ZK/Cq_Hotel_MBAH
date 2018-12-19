@@ -31,7 +31,7 @@
 	display: flex;
 	padding-left: 5em;
 	padding-right: 5em;
-	height: 65%;
+	height: 70%;
 }
 #reservation-modal-first-content-block-container{
 	width: 50%;
@@ -155,7 +155,7 @@
 
 /*RESERVATION MODAL FOOTER*/
 #reservation-modal-footer-container{
-	height: 35%;
+	height: 30%;
 	background-color: rgba(0, 0, 0, 1);
 }
 #reservation-modal-stars-container{
