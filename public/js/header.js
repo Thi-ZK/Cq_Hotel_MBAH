@@ -39,5 +39,9 @@ $(window).on("scroll touchmove", function (){
 			elem.style.display = "none"; 
 		});
 	});
+
+	document.querySelector("*[id*='chinese']").onclick = function(){
+		alert("sorry, my Mandarin is not good enough yet. So I haven't made the translation.");
+	}
 }();
 // header effects
