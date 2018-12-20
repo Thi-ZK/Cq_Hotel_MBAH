@@ -1,6 +1,7 @@
 !function(){
 	var contents = document.querySelectorAll(".information-content-div");
 	var content_direct_container = document.querySelector("#information-content-direct-container");
+	var content_details_container = document.querySelector("#content-selected-details-container");
 	var content_details_container_mob = document.querySelector("#content-selected-details-container-mob");
 	var contents_texts = document.querySelectorAll(
 		".flip-card-back h2," +
@@ -62,8 +63,8 @@
 			var info_content_cont = document.querySelector("#informations-content-container");
 
 			if(window.innerWidth >820){
-				document.querySelector("#content-selected-details-container").style.visibility = "visible";
-				document.querySelector("#content-selected-details-container").style.opacity = "1";
+				content_details_container.style.visibility = "visible";
+				content_details_container.style.opacity = "1";
 				window.innerWidth > 1450 ? info_content_cont.style.marginBottom = "14em" : info_content_cont.style.marginBottom = "20em";
 			}
 
@@ -79,7 +80,7 @@
 		}, 500);
 	}
 
-	var reverse_contents_animations = function(target){
+	var reverse_contents_animations = function(target){ // go back to options, reverse animation code
 		var info_content_cont = document.querySelector("#informations-content-container");
 
 		content_direct_container.style.left = "0%";
@@ -87,8 +88,10 @@
 		target.querySelector(".option-selected-click-to-go-back").style.visibility = "hidden"; // click again to go back to options
 		target.querySelector(".option-selected-click-to-go-back").style.opacity = "0";
 
-		document.querySelector("#content-selected-details-container").style.visibility = "hidden";
-		document.querySelector("#content-selected-details-container").style.opacity = "0";
+		window.innerWidth >= 820 ? content_details_container.style.visibility = "hidden" : content_details_container_mob.style.visibility = "hidden";
+		window.innerWidth >= 820 ? content_details_container.style.opacity = "0" : content_details_container_mob.style.opacity = "0";
+		content_details_container_mob.style.height = "0px";
+
 		info_content_cont.style.marginBottom = "0em";
 	}
 

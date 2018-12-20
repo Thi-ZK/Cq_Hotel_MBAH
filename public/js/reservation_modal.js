@@ -21,6 +21,14 @@
 
 	texts_manager(reservation_modal_texts, false);
 
+	// fixing this: https://ibb.co/9y5Lxsd
+	document.querySelector("#reservation-modal-email-container input").addEventListener("focus", function(){
+		reservation_modal.style.minHeight = "480px";
+	});
+	document.querySelector("#reservation-modal-email-container input").addEventListener("focusout", function(){
+		reservation_modal.style.minHeight = "auto";
+	});
+
 	document.querySelector(".make-reservation-container button").onclick = function(){
 		reservation_modal.style.visibility = "visible";
 		window.innerWidth <= 650 ? reservation_modal.style.height = "75vh" : reservation_modal.style.height = "80vh";
