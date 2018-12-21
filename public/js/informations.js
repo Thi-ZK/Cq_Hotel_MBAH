@@ -107,11 +107,11 @@
 		                window.innerWidth <= 820 ? contents[y].style.margin = "0px" : undefined;
 					}
 				}
-				if(window.innerWidth <= 820){
+				// if(window.innerWidth <= 820){
 					$([document.documentElement, document.body]).animate({
 				        scrollTop: $("#informations-titles-container p").offset().top
-				    }, 500);
-				}
+				    }, 750);
+				// }
 
 				setTimeout(contents_animation.bind(null, this), 1100);
 				content_direct_container.className = "option-selected-mode";

@@ -26,6 +26,7 @@
 			</div>
 			<div id="informations-content-container">
 				<div id="information-content-direct-container" class="options-mode">
+					<%var imgs_path_info_contents = ["bed_thumb", "check_in", "calendar_2", "yuan", "building", "globe"]%>
 					<%var infos_contents_titles_h2 = ["Rooms", "Check-in & Check-out", "Events", "Prices & Costs", "Structure", "Localization"]%>
 					<%var infos_contents_texts_p = ["our Rooms", "our Check-in & Check-out processes", "Events", "the Prices & Costs", "our Structure", "our Localization"]%>
 					<%for(var i = 0; i < 6; i++){%>
@@ -33,7 +34,7 @@
 							<div class="flip-card-inner">
 								<div class="flip-card-front">
 									<div class="information-content-image-container">
-										<img src="/imgs/informations/check_in.png">
+										<img src="/imgs/informations/<%=imgs_path_info_contents[i]%>.png">
 									</div>
 									<div class="information-content-title-container">
 										<h2><%=infos_contents_titles_h2[i]%></h2>

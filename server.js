@@ -13,6 +13,10 @@ appl.get('/', (req, res) => {
 	res.render(__dirname + '/views/home.ejs');
 });
 
+appl.get('/posts_and_contents', (req, res) => {
+	res.render(__dirname + '/views/posts_and_contents.ejs');
+});
+
 appl.get('/gallery', (req, res) => {
 	res.render(__dirname + '/views/gallery.ejs');
 });
@@ -23,10 +27,6 @@ appl.get('/about_us', (req, res) => {
 
 appl.get('/informations', (req, res) => {
 	res.render(__dirname + '/views/informations.ejs');
-});
-
-appl.get('/test', (req, res) => {
-	res.render(__dirname + '/views/partials/calendar.ejs');
 });
 
 appl.listen((process.env.PORT || 12555), function(){
