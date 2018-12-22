@@ -304,6 +304,65 @@ table {
 	letter-spacing: 0.0500em !important;
 	text-decoration: underline !important;
 }
+
+
+#jiefangbei-main-content-container{
+	padding-top: 8em;
+}
+#jiefangbei-title-container h2{
+	padding-bottom: 2.5em;
+	padding-left: 15px;
+	font-size: 1.45em;
+	font-weight: normal;
+	font-family: 'Quicksand', sans-serif;
+	letter-spacing: 0.2em;
+	text-align: center;
+	text-transform: uppercase;
+}
+#jiefangbei-first-block-image-container{
+	display: flex;
+	justify-content: center;
+}
+#jiefangbei-first-block-image-container img{
+	width: 85vw;
+	height: 92vh;
+	box-shadow: 0 1px 30px 4px rgba(0,0,0,.22);
+}
+#jiefangbei-img-gradient{
+	width: 85vw;
+	height: 35vh;
+	position: absolute;
+	z-index: 10;
+	object-fit: cover;
+	background: linear-gradient(180deg,transparent 0,rgba(0, 0, 0, 1));
+}
+#jiefangbei-first-img-text-container{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-direction: column;
+	height: 100%;
+}
+#jiefangbei-first-img-text-container p{
+	color: white;
+	z-index: 11;
+	padding: 2.5em;
+}
+p[jiefangbei-texts-index='1']{
+	font-family: 'Cormorant Upright', serif;
+	font-style: italic;
+	font-size: 1em;
+	letter-spacing: 0.06em;
+	padding-bottom: 0.5em !important;
+}
+p[jiefangbei-texts-index='2']{
+	font-family: 'Quicksand', serif;
+	text-transform: uppercase;
+	font-size: 0.95em;
+	letter-spacing: 0.3em;
+	padding-top: 0.5em !important;
+	font-weight: bold;
+}
 /*SECOND CONTENT BLOCK*/
 
 /*THIRD CONTENT BLOCK*/
@@ -595,13 +654,22 @@ footer{
 	#video_lower_height{
 		display: block;
 	}
+	#jiefangbei-first-block-image-container img{
+		height: 83vh;
+	}
 }
 
 @media(max-width: 1300px){
 	#hotel-main-picture-titles-container{
 		bottom: 130px;
 	}
-
+	#jiefangbei-first-block-image-container img{
+		width: 95vw;
+		height: 80vh;
+	}
+	#jiefangbei-img-gradient{
+		width: 95vw;
+	}
 	#location-content-container{
 		flex-direction: column;
 	}
@@ -690,7 +758,11 @@ footer{
 		margin-left: 0px;
 	}
 }
-
+@media(max-width: 850px){
+	#jiefangbei-main-content-container{
+		display: none;
+	}
+}
 @media(max-width: 750px){
 	.first-content-images-container{
 		flex-direction: column;
