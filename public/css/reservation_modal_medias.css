@@ -7,7 +7,7 @@
 		font-size: 0.8em !important;
 	}
 	#reservation-modal-first-block-title-container h1{
-		font-size: 1.15em;
+		font-size: 1.25em;
 	}
 	#reservation-modal-first-block-title-container h2{
 		font-size: 1.6em;
@@ -118,14 +118,30 @@
 }
 
 @media(max-width: 480px){
+	#reservations-text{
+		padding-bottom: 1.5em !important;
+	}
+	#contact-us-text{
+		display: none !important;
+	}
+	#reservation-modal-send-button-container{
+		padding-top: 0px;
+	}
 	#people-number-direct-container p, #check-in-calendar-container p, #check-out-calendar-container p{
 		font-size: 0.7em !important;
+	}
+	#people-number-direct-container{
+		padding-bottom: 1.5em !important;
 	}
 	#reservation-modal-first-block-title-container h2{
 		font-size: 1.3em;
 	}
 	#reservation-modal-first-block-title-container h1{
 		font-size: 1em;
+	}
+	#reservation-modal-second-content-first-block-container{
+		padding: 0.5em;
+		padding-top: 1em;
 	}
 }
 @media(max-width: 450px){
@@ -134,10 +150,6 @@
 	}
 	#reservation-modal-first-block-texts-container{
 		display: none;
-	}
-	#reservation-modal-second-content-first-block-container{
-		padding: 1em;
-		padding-top: 2em;
 	}
 	#reservation-modal-first-content-block-container{
 		display: flex;
@@ -149,5 +161,8 @@
 	}
 	#reservation-modal-email-container{
 		width: 100%;
+	}
+	#reservation-model-footer-title-container p{
+		font-size: 1.15em;
 	}
 }

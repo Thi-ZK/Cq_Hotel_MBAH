@@ -118,7 +118,6 @@ table {
 	padding-bottom: 1em;
 }
 #absolute-bottom-modal-title-container h2{
-	/*font-family: 'Cormorant Upright', serif;*/
 	font-family: 'Lora', serif;
 	text-align: center;
 	text-transform: uppercase;
@@ -141,6 +140,7 @@ table {
 	font-weight: bold;
 	cursor: pointer;
 	transition-duration: 0.4s;
+	border: 1px solid white;
 }
 #absolute-bottom-modal-button-container button:hover{
 	background-color: white;
@@ -148,3 +148,50 @@ table {
 	border: 1px solid black;
 }
 /*JIEFANGBEI*/
+#jiefangbei-main-content-container{
+
+}
+#jiefangbei-first-block-image-container{
+	display: flex;
+	justify-content: center;
+}
+#jiefangbei-first-block-image-container img{
+	width: 85vw;
+	height: 92vh;
+	box-shadow: 0 1px 30px 4px rgba(0,0,0,.22);
+}
+#jiefangbei-img-gradient{
+	width: 85vw;
+	height: 35vh;
+	position: absolute;
+	z-index: 10;
+	object-fit: cover;
+	background: linear-gradient(180deg,transparent 0,rgba(0, 0, 0, 1));
+}
+#jiefangbei-first-img-text-container{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-direction: column;
+	height: 100%;
+}
+#jiefangbei-first-img-text-container p{
+	color: white;
+	z-index: 11;
+	padding: 2.5em;
+}
+p[jiefangbei-texts-index='1']{
+	font-family: 'Cormorant Upright', serif;
+	font-style: italic;
+	font-size: 0.95em;
+	letter-spacing: 0.06em;
+	padding-bottom: 0.5em !important;
+}
+p[jiefangbei-texts-index='2']{
+	font-family: 'Quicksand', serif;
+	text-transform: uppercase;
+	font-size: 0.95em;
+	letter-spacing: 0.15em;
+	padding-top: 0.5em !important;
+	font-weight: bold;
+}
