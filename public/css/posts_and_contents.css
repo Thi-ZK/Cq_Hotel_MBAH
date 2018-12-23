@@ -151,51 +151,65 @@ table {
 #jiefangbei-main-content-container{
 	padding-bottom: 7.5em;
 }
-#jiefangbei-first-content-container{
+.jiefangbei-first-content-container{
 	display: flex;
 	justify-content: center;
+	padding-bottom: 7em;
 }
-#jiefangbei-first-content-img-container{
+.jiefangbei-first-content-img-container{
 	padding-right: 2em;
 	width: 35%;
 	display: flex;
 	justify-content: flex-end;
 }
-#jiefangbei-first-content-img-container img{
-	-webkit-box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
-	-moz-box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
-	box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
+#jiefangbei-first-content-img-container-2{
+	width: 28%;
 }
-#jiefangbei-first-content-texts-container{
+.jiefangbei-first-content-texts-container{
 	padding-left: 2em;
 	width: 35%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-#jiefangbei-first-content-texts-container h2{
+#jiefangbei-first-content-texts-container-2{
+	width: 28%;
+}
+.jiefangbei-first-content-texts-container h2{
 	padding-top: 0.4em;
 	padding-bottom: 1em;
 	color: black;
 	line-height: 30px;
-	font-size: 1.55em;
+	font-size: 1.75em;
 	font-family: 'Cormorant Upright', serif;
 	text-transform: capitalize;
 	letter-spacing: 0.1em;
 	font-weight: normal;
 	width: 80%;
 }
-#jiefangbei-photo-description{
+.jiefangbei-photo-description{
 	font-family: 'Quicksand', serif;
 	letter-spacing: 0.018em;
 	font-size: 0.9em;
 	color: grey;
 }
-#jiefangbei-first-content-texts-container p{
+.jiefangbei-first-content-texts-container p{
 	font-family: 'Questrial', serif;
 	/*padding-bottom: 6px;*/
 	letter-spacing: 0.045em;
 	color: rgb(100, 100, 100);
-	font-size: 0.95em;
+	font-size: 0.9em;
 	line-height: 22px;
+}
+#jiefangbei2{
+	height: 375px;
+	-webkit-box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
+	-moz-box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
+	box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
+}
+#jiefangbei3{
+	height: 500px;
+	-webkit-box-shadow: 61px 60px 2px -5px rgba(0,0,0,0.04);
+	-moz-box-shadow: 61px 60px 2px -5px rgba(0,0,0,0.04);
+	box-shadow: 61px 60px 2px -5px rgba(0,0,0,0.04);
 }
