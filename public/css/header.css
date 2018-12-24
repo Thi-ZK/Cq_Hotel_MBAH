@@ -73,6 +73,7 @@ header{
 .logo-container img{
 	width: 75px;
 	height: 70px;
+	cursor: pointer;
 }
 .logo_tiny{
 	height: 50px !important;

@@ -43,5 +43,9 @@ $(window).on("scroll touchmove", function (){
 	document.querySelector("*[id*='chinese']").onclick = function(){
 		alert("sorry, my Mandarin is not good enough yet. So I haven't made the translation.");
 	}
+
+	document.querySelector("#logo").onclick = function(){
+		window.location.href = "/";
+	}
 }();
 // header effects

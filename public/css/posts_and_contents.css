@@ -57,7 +57,7 @@ table {
 	
 }
 #jiefangbei-top-content-container{
-	height: 305px;
+	height: 265px;
 	display: flex;
 	justify-content: center;
 	background: linear-gradient( rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.77)), url("/imgs/posts_and_contents/jiefangbei/jiefangbei_bg.jpg");
@@ -98,8 +98,8 @@ table {
 	position: relative;
 	background-color: white;
 	box-shadow: 0 1px 30px 4px rgba(0,0,0,.12);
-	width: 340px;
-	height: 180px;
+	width: 320px;
+	height: 155px;
 	left: 1%;
 	top: 50%;
 	display: flex;
@@ -125,7 +125,7 @@ table {
 	padding-right: 18px;
 	padding-left: 18px;
 	letter-spacing: 0.08em;
-	padding-bottom: 1em;
+	padding-bottom: 0.6em;
 	line-height: 25px;
 }
 #absolute-bottom-modal-button-container button{
@@ -163,7 +163,10 @@ table {
 	justify-content: flex-end;
 }
 #jiefangbei-first-content-img-container-2{
-	width: 28%;
+	width: 43%;
+	justify-content: flex-start;
+	padding-right: 0px;
+	padding-left: 3.5em;
 }
 .jiefangbei-first-content-texts-container{
 	padding-left: 2em;
@@ -173,7 +176,14 @@ table {
 	justify-content: center;
 }
 #jiefangbei-first-content-texts-container-2{
-	width: 28%;
+	width: 54%;
+	display: flex;
+	align-items: flex-end;
+	padding-left: 0px;
+	padding-right: 0em;
+}
+#jiefangbei-first-content-texts-container-2-aux{
+	width: 50%;
 }
 .jiefangbei-first-content-texts-container h2{
 	padding-top: 0.4em;
@@ -202,14 +212,19 @@ table {
 	line-height: 22px;
 }
 #jiefangbei2{
-	height: 375px;
+	height: 350px;
 	-webkit-box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
 	-moz-box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
 	box-shadow: -62px 52px 1px 3px rgba(0,0,0,0.04);
 }
 #jiefangbei3{
-	height: 500px;
+	height: 470px;
 	-webkit-box-shadow: 61px 60px 2px -5px rgba(0,0,0,0.04);
 	-moz-box-shadow: 61px 60px 2px -5px rgba(0,0,0,0.04);
 	box-shadow: 61px 60px 2px -5px rgba(0,0,0,0.04);
+}
+@media(max-width: 1550px){
+	#jiefangbei-first-content-texts-container-2-aux{
+		width: 65%;
+	}
 }
