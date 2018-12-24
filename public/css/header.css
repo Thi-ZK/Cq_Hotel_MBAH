@@ -2,7 +2,7 @@
 .headers-container{
 	letter-spacing: 0.0625em;
 	position: fixed;
-	z-index: 99999;
+	z-index: 9999;
 	width: 100%;
 	top: 0;
 }
@@ -62,7 +62,7 @@ header{
 	transition: height 500ms, background 500ms;
 	padding-right: 32px;
 	padding-left: 32px;
-	z-index: 99999;
+	z-index: 9999;
 }
 #header.tiny {
   height: 80px;
