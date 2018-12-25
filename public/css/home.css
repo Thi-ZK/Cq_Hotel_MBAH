@@ -351,14 +351,14 @@ table {
 	z-index: 11;
 	padding: 2.5em;
 }
-p[jiefangbei-texts-index='1']{
+p[jiefangbei-texts-index='1'], p[home-background-text-index='1']{
 	font-family: 'Cormorant Upright', serif;
 	font-style: italic;
 	font-size: 1em;
 	letter-spacing: 0.06em;
 	padding-bottom: 0.5em !important;
 }
-p[jiefangbei-texts-index='2']{
+p[jiefangbei-texts-index='2'], p[home-background-text-index='2']{
 	font-family: 'Quicksand', serif;
 	text-transform: uppercase;
 	font-size: 0.95em;
@@ -862,6 +862,25 @@ footer{
 	    z-index: 10;
 	    object-fit: cover;
 	    background: linear-gradient(180deg,transparent 0,rgba(0, 0, 0, 1));
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: flex-end;
+	    flex-direction: column;
+	}
+	#video-gradient-mob p{
+		color: white;
+		padding: 0.5em;
+		padding-right: 1em;
+		z-index: 12;
+	}
+	p[home-background-text-index='1']{
+		font-size: 0.9em;
+		text-transform: capitalize;
+	}
+	p[home-background-text-index='2']{
+		font-size: 0.82em;
+		padding-top: 0px !important;
+		padding-bottom: 1.5em !important;
 	}
 	.content-presentation-title-container{
 		padding-top: 7.5em;

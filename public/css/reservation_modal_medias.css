@@ -147,6 +147,7 @@
 @media(max-width: 450px){
 	#reservation-modal-content-container{
 		flex-direction: column;
+		align-items: center;
 	}
 	#reservation-modal-first-block-texts-container{
 		display: none;
