@@ -48,6 +48,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.bolder{
+	font-weight: bold;
+}
+
 .main-content-container{
 	margin-top: 16.5vh;
 	/*background-color: rgb(240, 240, 240);*/
@@ -79,7 +84,9 @@ table {
 
 /*CONTENT CONTAINER*/
 #informations-content-container{
-	transition-duration: 0.75s;
+	-webkit-transition-duration: 0.75s;
+	     -o-transition-duration: 0.75s;
+	        transition-duration: 0.75s;
 	padding-top: 4em;
 }
 #informations-content-container{
@@ -258,7 +265,9 @@ table {
 	text-align: center;
 	padding-top: 8px;
 	letter-spacing: 0.04em;
-	transition-duration: 2s;
+	-webkit-transition-duration: 2s;
+	     -o-transition-duration: 2s;
+	        transition-duration: 2s;
 }
 /*FLIP*/
 
@@ -271,7 +280,9 @@ table {
 	width: 30%;
 	opacity: 0;
 	visibility: hidden;
-	transition-duration: 2.5s;
+	-webkit-transition-duration: 2.5s;
+	     -o-transition-duration: 2.5s;
+	        transition-duration: 2.5s;
 }
 #content-selected-details-container-mob{
 	margin-bottom: 5em;
@@ -279,7 +290,9 @@ table {
 	/*display: none;*/
 	height: 0px;
 	visibility: hidden;
-	transition-duration: 2.5s;
+	-webkit-transition-duration: 2.5s;
+	     -o-transition-duration: 2.5s;
+	        transition-duration: 2.5s;
 }
 #content-selected-details-container h1, #content-selected-details-container-mob h1{
 	font-family: 'Cormorant Upright', serif;
