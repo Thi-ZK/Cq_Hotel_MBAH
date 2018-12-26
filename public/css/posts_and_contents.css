@@ -228,7 +228,7 @@ table {
 #jiefangbei-second-content-container{
 	width: 100%;
 	height: 80vh;
-	background-color: rgb(70, 70, 70);
+	background-color: rgb(35, 35, 35);
 	box-shadow: 0px 0px 10px 0px black;
 	margin-bottom: 10em;
 }
@@ -245,7 +245,7 @@ table {
 }
 #jiefangbei-second-content-modal-1{
 	background-color: rgb(245,245,245);
-	width: 20vw;
+	width: 19vw;
 	height: 22vh;
 	/*background-color: white;*/
 	box-shadow: 0 1px 30px 4px rgba(0,0,0,.22);
@@ -256,7 +256,7 @@ table {
 #jiefangbei-second-content-modal-2{
 	width: 17vw;
 	height: 28vh;
-	background-color: rgb(110, 110, 110);
+	background-color: rgb(70, 70, 70);
 	margin-top: 30px;
 	box-shadow: 0 1px 30px 4px rgba(0,0,0,.22);
 }
@@ -273,7 +273,7 @@ table {
 }
 #jiefangbei-second-content-modal-1-title h2{
 	text-align: center;
-	font-size: 1.35em;
+	font-size: 1.15em;
 	line-height: 30px;
 	padding-bottom: 0px;
 }
@@ -300,6 +300,7 @@ table {
 	font-family: 'Questrial', serif;
 	letter-spacing: 0.05em;
 	color: white;
+	font-size: 1em;
 }
 
 
@@ -309,10 +310,52 @@ table {
 
 }
 #jiefangbei-second-content-description-topics-container{
-
+	width: 21%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.jiefangbei-second-content-description-topics-direct-container{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.jscdtd1{
+	margin-bottom: 5%;
+}
+.jscdtd2{
+	margin-top: 5%;
 }
 .jiefangbei-second-content-topic{
-	
+	width: 40%;
+}
+.jiefangbei-second-content-topic-icon{
+	display: flex;
+	justify-content: center;
+}
+.jiefangbei-second-content-topic-icon > div{
+	border-radius: 30px;
+	padding: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: steelblue;
+	color: white;
+	font-family: 'Questrial', serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.jiefangbei-second-content-topic h3{
+	text-align: center;
+	color: white;
+	font-family: 'Cormorant Upright', serif;
+	text-transform: capitalize;
+	padding-top: 1em;
+	letter-spacing: 0.08em;
+	font-weight: normal;
+}
+#jiefangbei-second-content-description-texts-container{
+	width: 21%;
 }
 /*JIEFANGBEI*/
 
