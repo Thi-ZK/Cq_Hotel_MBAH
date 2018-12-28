@@ -1,0 +1,25 @@
+#wansheng-top-divisor-background-container{
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("/imgs/posts_and_contents/wansheng/adventurer_bg.jpeg");
+	height: 410px;
+}
+#wansheng-top-divisor-background-texts-container{
+	padding: 6em;
+}
+#wansheng-top-divisor-background-texts-container h2{
+	padding-bottom: 1em;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.5em;
+	letter-spacing: 0.2em;
+	line-height: 25px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: normal;
+	/*font-family: 'Cormorant Upright', serif;*/
+}
+#wansheng-top-divisor-background-texts-container p{
+	color: white;
+	font-family: 'Cormorant Upright', serif;
+	font-size: 1.2em;
+	letter-spacing: 0.1em;
+	line-height: 22px;
+}
