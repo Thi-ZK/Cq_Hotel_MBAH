@@ -121,6 +121,7 @@ table {
 	background-color: #e9f1fa;
 	margin: 1em;
 	cursor: pointer;
+	will-change: transform;
 }
 .information-content-div:hover{
 	-webkit-box-shadow: 0 1px 30px 4px rgba(0,0,0,.15);
@@ -128,6 +129,7 @@ table {
 	-webkit-transition-duration: 0.9s;
 	     -o-transition-duration: 0.9s;
 	        transition-duration: 0.9s;
+	will-change: transform;
 }
 .information-content-div img{
 	width: 60px;

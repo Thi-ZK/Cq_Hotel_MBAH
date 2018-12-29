@@ -102,7 +102,7 @@
 
 				for (var y = 0; y < contents.length; y++) {
 					if(contents[y] !== this){
-		                contents[y].style.height = "0px";
+		                contents[y].style.transform = "scale(0.1)";
 		                contents[y].style.visibility = "hidden";
 		                window.innerWidth <= 820 ? contents[y].style.margin = "0px" : undefined;
 					}
@@ -123,7 +123,7 @@
 				reverse_contents_animations(this);
 
 				for (var y = 0; y < contents.length; y++) {
-					contents[y].style.height = "240px";
+					contents[y].style.transform = "scale(1)";
 					contents[y].style.margin = "1em";
 					contents[y].style.visibility = "visible";
 				}
