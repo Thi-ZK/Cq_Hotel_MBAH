@@ -125,9 +125,9 @@ table {
 .information-content-div:hover{
 	-webkit-box-shadow: 0 1px 30px 4px rgba(0,0,0,.15);
 	        box-shadow: 0 1px 30px 4px rgba(0,0,0,.15);
-	-webkit-transition-duration: 0.25s;
-	     -o-transition-duration: 0.25s;
-	        transition-duration: 0.25s;
+	-webkit-transition-duration: 0.9s;
+	     -o-transition-duration: 0.9s;
+	        transition-duration: 0.9s;
 }
 .information-content-div img{
 	width: 60px;

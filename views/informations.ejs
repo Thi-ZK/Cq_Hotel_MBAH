@@ -26,6 +26,7 @@
 			</div>
 			<div id="informations-content-container">
 				<div id="information-content-direct-container" class="options-mode">
+					<%var background_url_div_id = ["room", "checkin", "events", "prices", "structure", "localization"]%>
 					<%var imgs_path_info_contents = ["bed_thumb", "check_in", "calendar_2", "yuan", "building", "globe"]%>
 					<%var infos_contents_titles_h2 = ["Rooms", "Check-in & Check-out", "Events", "Prices & Costs", "Structure", "Localization"]%>
 					<%var infos_contents_texts_p = ["our Rooms", "our Check-in & Check-out processes", "Events", "the Prices & Costs", "our Structure", "our Localization"]%>
@@ -43,7 +44,7 @@
 										<p>Click here to understand and know more about <%=infos_contents_texts_p[i]%>.</p>
 									</div>
 								</div>
-								<div id="flip-card-back-checkin" class="flip-card-back">
+								<div id="flip-card-back-<%=background_url_div_id[i]%>" class="flip-card-back">
 									<div class="flip-card-back-title-container">
 										<h2>Click to see all details about <%=infos_contents_texts_p[i]%></h2>
 									</div>
