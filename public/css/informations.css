@@ -190,12 +190,14 @@ table {
   transition: transform 1s, -webkit-transform 1s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  will-change: transform;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+   will-change: transform;
 }
 
 /* Position the front and back side */
@@ -217,6 +219,7 @@ table {
           transform: rotateY(180deg);
   -webkit-box-shadow: 0 1px 30px 4px rgba(0,0,0,.15);
           box-shadow: 0 1px 30px 4px rgba(0,0,0,.15);
+  will-change: transform;
 }
 #flip-card-back-localization{
 	background-image: url("/imgs/informations/city.jpg");

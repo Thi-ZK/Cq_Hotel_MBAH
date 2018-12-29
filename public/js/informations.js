@@ -1,4 +1,5 @@
 !function(){
+	var footer = document.querySelector("footer");
 	var contents = document.querySelectorAll(".information-content-div");
 	var content_direct_container = document.querySelector("#information-content-direct-container");
 	var content_details_container = document.querySelector("#content-selected-details-container");
@@ -34,26 +35,54 @@
 		});
 	}
 
+	var htm_1 = { // width > 1525
+		"1": "0",
+		"2": "0",
+		"3": "0",
+		"4": "-25",
+		"5": "-25",
+		"6": "-25"
+	};
+
+	var htm_2 = { // (window.innerWidth > 1022) && (window.innerWidth < 1525)
+		"1": "0",
+		"2": "0",
+		"3": "-30",
+		"4": "-30",
+		"5": "-70",
+		"6": "-70"
+	};
+
+	var htm_3 = { // (window.innerWidth < 1022) && (window.innerWidth > 820)
+		"1": "0",
+		"2": "-35",
+		"3": "-70",
+		"4": "-105",
+		"5": "-140",
+		"6": "-175"
+	};
+
 	var contents_animation = function(target){ // takes care of all transitions effects, except for setting the height 0
+		t_index = target.getAttribute("content_index");
 		document.querySelector("#information-content-direct-container").style.position = "relative";
 		if(window.innerWidth > 1525){
-			if((target.getAttribute("content_index") == "2") || (target.getAttribute("content_index") == "5")){
-				target.style.transform = "translate(-18vw)";
+			if((t_index == "2") || (t_index == "5")){
+				target.style.transform = "translate(-18vw," + htm_1[t_index] + "vh)";
 			}
-			if((target.getAttribute("content_index") == "3") || (target.getAttribute("content_index") == "6")){
-				target.style.transform = "translate(-39vw)";
+			if((t_index == "3") || (t_index == "6")){
+				target.style.transform = "translate(-39vw," + htm_1[t_index] + "vh)";
 			}
-			if((target.getAttribute("content_index") == "1") || (target.getAttribute("content_index") == "4")){
-				target.style.transform = "translate(3vw)";
+			if((t_index == "1") || (t_index == "4")){
+				target.style.transform = "translate(3vw," + htm_1[t_index] + "vh)";
 			}
 		}else if((window.innerWidth > 1022) && (window.innerWidth < 1525)){
-			if((target.getAttribute("content_index") == "1") || (target.getAttribute("content_index") == "3") || (target.getAttribute("content_index") == "5")){
-				target.style.transform = "translate(-9vw)";
+			if((t_index == "1") || (t_index == "3") || (t_index == "5")){
+				target.style.transform = "translate(-9vw," + htm_2[t_index] + "vh)";
 			}else{
-				target.style.transform = "translate(-35vw)";
+				target.style.transform = "translate(-35vw," + htm_2[t_index] + "vh)";
 			}
 		}else if((window.innerWidth < 1022) && (window.innerWidth > 820)){
-			target.style.transform = "translate(-24vw)";
+			target.style.transform = "translate(-24vw," + htm_3[t_index] + "vh)";
 		}
 
 		target.querySelector(".option-selected-click-to-go-back").style.visibility = "visible"; // click again to go back to options
@@ -65,17 +94,17 @@
 			if(window.innerWidth >820){
 				content_details_container.style.visibility = "visible";
 				content_details_container.style.opacity = "1";
-				window.innerWidth > 1450 ? info_content_cont.style.marginBottom = "14em" : info_content_cont.style.marginBottom = "20em";
+				window.innerWidth > 1450 ? footer.style.transform = "translateY(14em)" : footer.style.transform = "translateY(20em)";
 			}
 
 			if(window.innerWidth < 970){
-				info_content_cont.style.marginBottom = "24em";
+				footer.style.transform = "translateY(24em)"
 			}
 			if(window.innerWidth < 820){
 				content_details_container_mob.style.height = "auto";
 				content_details_container_mob.style.visibility = "visible";
 				content_details_container_mob.style.opacity = "1";
-				info_content_cont.style.marginBottom = "0em";
+				footer.style.transform = "translateY(0em)"
 			}
 		}, 500);
 	}
@@ -92,7 +121,7 @@
 		window.innerWidth >= 820 ? content_details_container.style.opacity = "0" : content_details_container_mob.style.opacity = "0";
 		content_details_container_mob.style.height = "0px";
 
-		info_content_cont.style.marginBottom = "0em";
+		footer.style.transform = "translateY(0em)"
 	}
 
 	for (var i = 0; i < contents.length; i++) {
@@ -109,11 +138,11 @@
 				}
 				if(window.innerWidth <= 820){
 					$([document.documentElement, document.body]).animate({
-				        scrollTop: $("#informations-titles-container p").offset().top
+				        scrollTop: $("#informations-titles-container h1").offset().top
 				    }, 400);
 				}else{
 					$([document.documentElement, document.body]).animate({
-				        scrollTop: $("#informations-titles-container p").offset().top
+				        scrollTop: $("#informations-titles-container h1").offset().top
 				    }, 850);
 				}
 

@@ -8,6 +8,8 @@ footer{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	transition-duration: 0.7s;
+	will-change: transform;
 }
 #footer-first-block{
 	width: 85%;
