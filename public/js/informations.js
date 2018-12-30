@@ -94,6 +94,7 @@
 			target.style.transform = "translate(-24vw," + htm_3[t_index] + "vh)";
 		}else{
 			target.style.transform = "translate(0vw," + htm_4[t_index] + "vh)";
+			content_direct_container.style.maxHeight = "310px";
 		}
 
 		target.querySelector(".option-selected-click-to-go-back").style.visibility = "visible"; // click again to go back to options
@@ -114,12 +115,13 @@
 			if(window.innerWidth < 820){
 				content_details_container_mob.style.visibility = "visible";
 				content_details_container_mob.style.opacity = "1";
-				footer.style.transform = "translateY(0em)"
+				footer.style.transform = "translateY(0em)";
 			}
 		}, 500);
 	}
 
 	var reverse_contents_animations = function(target){ // go back to options, reverse animation code
+		window.innerWidth <= 820 ? content_direct_container.style.maxHeight = "1100px" : undefined;
 		var info_content_cont = document.querySelector("#informations-content-container");
 
 		target.style.transform = "translate(0vw)";
@@ -148,8 +150,8 @@
 				}
 				if(window.innerWidth <= 820){
 					$([document.documentElement, document.body]).animate({
-				        scrollTop: $("#informations-titles-container h1").offset().top
-				    }, 400);
+				        scrollTop: $("#informations-titles-container p").offset().top
+				    }, 850);
 				}else{
 					$([document.documentElement, document.body]).animate({
 				        scrollTop: $("#informations-titles-container h1").offset().top
