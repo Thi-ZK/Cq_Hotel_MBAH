@@ -293,7 +293,7 @@ table {
 	margin-bottom: 5em;
 	opacity: 0;
 	/*display: none;*/
-	height: 0px;
+	/*height: 0px;*/
 	visibility: hidden;
 	-webkit-transition-duration: 2.5s;
 	     -o-transition-duration: 2.5s;
