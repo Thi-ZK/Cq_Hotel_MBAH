@@ -62,13 +62,13 @@
 		"6": "-175"
 	};
 
-	var htm_4 = { // (window.innerWidth < 1022) && (window.innerWidth > 820)
+	var htm_4 = { // < 820
 		"1": "0",
 		"2": "-36",
 		"3": "-70",
-		"4": "-110",
-		"5": "-145",
-		"6": "-185"
+		"4": "-106",
+		"5": "-140",
+		"6": "-178"
 	};
 
 	var contents_animation = function(target){ // takes care of all transitions effects, except for setting the height 0

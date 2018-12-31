@@ -93,3 +93,53 @@
 #lake-content-image-container{
 	width: 70%;
 }
+
+
+
+@media(max-width: 900px){
+	#skyline-content-aux-container{
+		flex-direction: column;
+	}
+	#skyline-content-image-container{
+		width: 100%;
+	}
+	#skyline-content-description-container{
+		width: 100%;
+		padding-top: 2em;
+	}
+	#skyline-content-description-container h3, #lake-content-description-container h3{
+		text-align: center;
+	}
+	#skyline-content-description-container p, #lake-content-description-container p{
+		text-align: center;
+	}
+	#lake-content-aux-container{
+		flex-direction: column;
+	}
+	#lake-content-image-container{
+		width: 100%;
+	}
+	#lake-content-description-container{
+		width: 100%;
+		padding-top: 2em;
+	}
+}
+@media(max-width: 750px){
+	#wansheng-presentation-main-image-container img{
+		height: 70vh;
+	}
+}
+@media(max-width: 750px){
+	#wansheng-presentation-main-image-container img{
+		display: none;
+	}
+	#wansheng-presentation-first-title-container h2{
+		padding-left: 1em;
+		padding-right: 1em;
+		line-height: 32px;
+		font-size: 1.3em;
+	}
+	#skyline-content-container{
+		padding-top: 0px;
+	}
+}
