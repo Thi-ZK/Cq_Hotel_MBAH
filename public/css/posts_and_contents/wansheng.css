@@ -1,3 +1,6 @@
+#wansheng-container{
+	margin-bottom: 8em;
+}
 #wansheng-top-divisor-background-container{
 	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url("/imgs/posts_and_contents/wansheng/adventurer_bg.jpeg");
 	height: 410px;

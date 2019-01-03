@@ -39,27 +39,27 @@
 		"1": "0",
 		"2": "0",
 		"3": "0",
-		"4": "-25",
-		"5": "-25",
-		"6": "-25"
+		"4": String((((window.innerHeight / 65) + 10) * -1)),
+		"5": String((((window.innerHeight / 65) + 10) * -1)),
+		"6": String((((window.innerHeight / 65) + 10) * -1))
 	};
 
 	var htm_2 = { // (window.innerWidth > 1022) && (window.innerWidth < 1525)
 		"1": "0",
 		"2": "0",
-		"3": "-30",
-		"4": "-30",
-		"5": "-70",
-		"6": "-70"
+		"3": String((((window.innerHeight / 36) + 10) * -1)),
+		"4": String((((window.innerHeight / 36) + 10) * -1)),
+		"5": String((((window.innerHeight / 15) + 10) * -1)),
+		"6": String((((window.innerHeight / 15) + 10) * -1))
 	};
 
 	var htm_3 = { // (window.innerWidth < 1022) && (window.innerWidth > 820)
 		"1": "0",
-		"2": "-35",
-		"3": "-70",
-		"4": "-105",
-		"5": "-140",
-		"6": "-175"
+		"2": String((((window.innerHeight / 36) + 10) * -1)),
+		"3": String((((window.innerHeight / 18) + 10) * -1)),
+		"4": String((((window.innerHeight / 9) + 10) * -1)),
+		"5": String((((window.innerHeight / 4.5) + 10) * -1)),
+		"6": String((((window.innerHeight / 2.25) + 10) * -1))
 	};
 
 	var htm_4 = { // < 820
@@ -117,6 +117,8 @@
 				content_details_container_mob.style.opacity = "1";
 				footer.style.transform = "translateY(0em)";
 			}
+
+			window.__option_click_flag = false;
 		}, 500);
 	}
 
@@ -138,40 +140,44 @@
 
 	for (var i = 0; i < contents.length; i++) {
 		contents[i].addEventListener("click", function(){
-			if(content_direct_container.className === "options-mode"){ // to show the selected content and animations for that
-				texts_manager(contents_texts, false, this);
+			if(!window.__option_click_flag){
+				window.__option_click_flag = true;
+				if(content_direct_container.className === "options-mode"){ // to show the selected content and animations for that
+					texts_manager(contents_texts, false, this);
 
-				for (var y = 0; y < contents.length; y++) {
-					if(contents[y] !== this){
-		                contents[y].style.transform = "scale(0.02)";
-		                contents[y].style.visibility = "hidden";
-		                window.innerWidth <= 820 ? contents[y].style.margin = "0px" : undefined;
+					for (var y = 0; y < contents.length; y++) {
+						if(contents[y] !== this){
+			                contents[y].style.transform = "scale(0.02)";
+			                contents[y].style.visibility = "hidden";
+			                window.innerWidth <= 820 ? contents[y].style.margin = "0px" : undefined;
+						}
 					}
-				}
-				if(window.innerWidth <= 820){
-					$([document.documentElement, document.body]).animate({
-				        scrollTop: $("#informations-titles-container p").offset().top
-				    }, 850);
-				}else{
-					$([document.documentElement, document.body]).animate({
-				        scrollTop: $("#informations-titles-container h1").offset().top
-				    }, 850);
-				}
+					if(window.innerWidth <= 820){
+						$([document.documentElement, document.body]).animate({
+					        scrollTop: $("#informations-titles-container p").offset().top
+					    }, 850);
+					}else{
+						$([document.documentElement, document.body]).animate({
+					        scrollTop: $("#informations-titles-container h1").offset().top
+					    }, 850);
+					}
 
-				setTimeout(contents_animation.bind(null, this), 1100);
-				content_direct_container.className = "option-selected-mode";
-			}else{ // to hide last selected content and go back to options mode again
-				reverse_contents_animations(this);
+					setTimeout(contents_animation.bind(null, this), 1100);
+					content_direct_container.className = "option-selected-mode";
+				}else{ // to hide last selected content and go back to options mode again
+					reverse_contents_animations(this);
 
-				for (var y = 0; y < contents.length; y++) {
-					contents[y].style.transform = "scale(1)";
-					contents[y].style.margin = "1em";
-					contents[y].style.visibility = "visible";
+					for (var y = 0; y < contents.length; y++) {
+						contents[y].style.transform = "scale(1)";
+						contents[y].style.margin = "1em";
+						contents[y].style.visibility = "visible";
+					}
+
+					setTimeout(function(){texts_manager(contents_texts, true, this); window.__option_click_flag = false}, 700);
+					content_direct_container.className = "options-mode";
 				}
-
-				setTimeout(function(){texts_manager(contents_texts, true, this);}, 700);
-				content_direct_container.className = "options-mode";
 			}
 		});
 	}
 }();
+window.__option_click_flag = false;
