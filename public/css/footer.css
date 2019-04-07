@@ -96,6 +96,18 @@ footer{
 	margin-left: 250px;
 	padding: 9px 0px 9px 0px;
 }
+#newsletter_status_message_container{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding-top: 28px;
+	/*width: 50%;*/
+}
+#newsletter_status_message_container p{
+	font-family: 'Quicksand', sans-serif;
+	letter-spacing: 0.015em;
+	font-size: 0.85em;
+}
 #footer-line{
 	border-bottom: 1px solid rgb(210, 210, 210);
 	width: 70%;
