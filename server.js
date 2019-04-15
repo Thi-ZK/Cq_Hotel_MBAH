@@ -34,6 +34,10 @@ appl.get('/informations', (req, res) => {
 appl.post('/newsletter_submission', urlencodedParser, footer_and_headers_midds.newsletter_verification, (req, res) => {
 	res.send("email_validated_successfuly");
 });
+
+appl.post('/reservation_contact', urlencodedParser, (req, res) => {
+	res.send("koln");
+});
 /*generic requests*/
 appl.listen((process.env.PORT || 12555), function(){
 	// setInterval(function(){
