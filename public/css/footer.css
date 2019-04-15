@@ -101,12 +101,13 @@ footer{
 	justify-content: center;
 	text-align: center;
 	padding-top: 28px;
-	/*width: 50%;*/
+	max-width: 292px;
 }
 #newsletter_status_message_container p{
 	font-family: 'Quicksand', sans-serif;
 	letter-spacing: 0.015em;
 	font-size: 0.85em;
+	line-height: 22px;
 }
 #footer-line{
 	border-bottom: 1px solid rgb(210, 210, 210);
