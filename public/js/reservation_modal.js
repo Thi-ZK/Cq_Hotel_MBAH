@@ -101,6 +101,7 @@
 	}
 
 	document.querySelector("#reservation-modal-send-button-container button").addEventListener("click", function(){
+		var status_msg = document.querySelector("#reservation-modal-status-message p");
 		var email = document.querySelector("#reservation-modal-email-container input").value;
 		var check_in = document.querySelector("#check-out-div").innerText;
 		var check_out = document.querySelector("#check-in-div").innerText;
@@ -112,8 +113,20 @@
 				method: "POST",
 				data: {email: email, check_in: check_in, check_out: check_out}
 			}).done(function(){
+				status_msg.style.color = "green";
+				status_msg.innerText = "We appreciate a lot for your request! We are going to enter in contact as soon as possible.";
 				console.log(response.responseText);
 			});
+		}else{
+			status_msg.style.color = "red";
+
+			if((!email) && !(check_out.includes("19"))){
+				status_msg.innerText = "Apologies, but the email provided and the check-(in / out) are not valid";
+			}else if(!email){
+				status_msg.innerText = "Apologies, the email is not in a valid structure";
+			}else{
+				status_msg.innerText = "Apologies, the check-(in / out) are not valid";
+			}
 		}
 	});
 }());
