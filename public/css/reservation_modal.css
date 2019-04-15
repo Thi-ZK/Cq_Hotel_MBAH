@@ -149,6 +149,19 @@
 	color: black;
 	border: 1px solid black;
 }
+#reservation-modal-status-message{
+	display: flex;
+	justify-content: center;
+	padding-top: 1em;
+}
+#reservation-modal-status-message p{
+	width: 60%;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	line-height: 22px;
+	letter-spacing: 0.025em;
+	font-size: 0.9em;
+}
 /*RESERVATION MODAL FIRST BLOCK SEOCND PART*/
 /*RESERVATION MODAL FIRST BLOCK*/
 
