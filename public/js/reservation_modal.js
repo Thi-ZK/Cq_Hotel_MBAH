@@ -99,4 +99,21 @@
 			}
 		}()));
 	}
+
+	document.querySelector("#reservation-modal-send-button-container button").addEventListener("click", function(){
+		var email = document.querySelector("#reservation-modal-email-container input").value;
+		var check_in = document.querySelector("#check-out-div").innerText;
+		var check_out = document.querySelector("#check-in-div").innerText;
+		var people_number = document.querySelectorAll("#people-number-direct-container option").filter;
+
+		if(email && (check_out.includes("19")) && (check_in.includes("19"))){ // needs to make REGEX front end verifications too
+			var response = $.ajax({
+				url: "/reservation_contact",
+				method: "POST",
+				data: {email: email, check_in: check_in, check_out: check_out}
+			}).done(function(){
+				console.log(response.responseText);
+			});
+		}
+	});
 }());
