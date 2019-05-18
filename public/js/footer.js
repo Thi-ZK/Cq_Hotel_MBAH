@@ -4,7 +4,7 @@
 
 	newsletter_send_button.addEventListener("click", function(){
 		var newsletter_input_value = newsletter_input.value;
-		var newsletters_validation = /^[a-zA-Z0-9áéíóúçâêôã]{1,22}((-|_|\.)[0-9a-záéíóúçâêôã]{2,16}){0,3}@([a-z]{2,8})(\.[a-z]{2,8}){1,3}$/.test(newsletter_input_value);
+		var newsletters_validation = /^[a-zA-Z0-9áéíóúçâêôã]{1,22}((-|_|\.)[0-9a-záéíóúçâêôã]{2,16}){0,3}@([a-z]{2,12})(\.[a-z]{2,8}){1,3}$/.test(newsletter_input_value);
 		var status_msg = document.querySelector("#newsletter_status_message_container p");
 
 		if(newsletters_validation){

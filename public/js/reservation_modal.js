@@ -106,8 +106,9 @@
 		var check_in = document.querySelector("#check-out-div").innerText;
 		var check_out = document.querySelector("#check-in-div").innerText;
 		var people_number = document.querySelectorAll("#people-number-direct-container option").filter;
+		var email_regex = /^[a-zA-Z0-9áéíóúçâêôã]{1,22}((-|_|\.)[0-9a-záéíóúçâêôã]{2,16}){0,3}@([a-z]{2,12})(\.[a-z]{2,8}){1,3}$/;
 
-		if(email && (check_out.includes("19")) && (check_in.includes("19"))){ // needs to make REGEX front end verifications too
+		if(email_regex.test(email) && (check_out.includes("19")) && (check_in.includes("19"))){ // needs to make REGEX front end verifications too
 			var response = $.ajax({
 				url: "/reservation_contact",
 				method: "POST",
@@ -120,9 +121,9 @@
 		}else{
 			status_msg.style.color = "red";
 
-			if((!email) && !(check_out.includes("19"))){
+			if((!email_regex.test(email)) && !(check_out.includes("19"))){
 				status_msg.innerText = "Apologies, but the email provided and the check-(in / out) are not valid";
-			}else if(!email){
+			}else if(!email_regex.test(email)){
 				status_msg.innerText = "Apologies, the email is not in a valid structure";
 			}else{
 				status_msg.innerText = "Apologies, the check-(in / out) are not valid";

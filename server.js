@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
 var footer_and_headers_midds = require('./middlewares/footer_and_header.js');
+var reservation_modal_midds = require('./middlewares/reservation_modal.js');
 
 var appl = express();
 var urlencodedParser = bodyParser.urlencoded({extended:false});
@@ -35,7 +36,7 @@ appl.post('/newsletter_submission', urlencodedParser, footer_and_headers_midds.n
 	res.send("email_validated_successfuly");
 });
 
-appl.post('/reservation_contact', urlencodedParser, (req, res) => {
+appl.post('/reservation_contact', urlencodedParser,reservation_modal_midds.reservation_data_validation, (req, res) => {
 	res.send("koln");
 });
 /*generic requests*/
