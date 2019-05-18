@@ -36,7 +36,7 @@ appl.post('/newsletter_submission', urlencodedParser, footer_and_headers_midds.n
 	res.send("email_validated_successfuly");
 });
 
-appl.post('/reservation_contact', urlencodedParser,reservation_modal_midds.reservation_data_validation, (req, res) => {
+appl.post('/reservation_contact', urlencodedParser, reservation_modal_midds.reservation_data_validation, (req, res) => {
 	res.send("koln");
 });
 /*generic requests*/
