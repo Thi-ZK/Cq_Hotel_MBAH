@@ -14,11 +14,16 @@
 		padding-bottom: 0.4em;
 	}
 }
-
+@media(max-width: 1475px){
+	#reservation-modal-container{
+		width: 80vw;
+		margin-left: -40vw;
+	}
+}
 @media(max-width: 1200px){
 	#reservation-modal-content-container{
-		padding-right: 2em;
-		padding-left: 2em;
+		padding-right: 1em;
+		padding-left: 1em;
 	}
 	#reservation-modal-first-block-texts-container p{
 		padding-top: 0.6em;
@@ -88,6 +93,9 @@
 }
 
 @media(max-width: 800px){
+	#reservation-modal-status-message p{
+		width: 100%;
+	}
 	#reservation-modal-send-button-container button{
 		width: 80%;
 		padding: 12px;
@@ -96,8 +104,8 @@
 
 @media(max-width: 650px){
 	#reservation-modal-container{
-		width: 80vw;
-		margin-left: -40vw;
+		width: 90vw;
+		margin-left: -45vw;
 	}
 	#reservation-modal-first-block-title-container{
 		padding-top: 1em;

@@ -57,6 +57,7 @@ table {
   height: 400px;
   background-color: rgb(240, 240,240);
   position: absolute;
+  /*z-index: 99;*/
 }
 #calendar-top-header{
   display: flex;
